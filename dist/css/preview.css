@@ -43,3 +43,24 @@
 	height: 175px;
 	object-fit: cover; /* This ensures the images maintain their aspect ratio */
 }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Four columns */
+        gap: 20px; /* Adjust the gap between images as needed */
+    }
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+    .image-description {
+        text-align: center;
+        margin-top: 10px;
+    }
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+	.image-grid {
+		grid-template-columns: 1fr; /* Stacks the images on mobile */
+	}
+}
+
