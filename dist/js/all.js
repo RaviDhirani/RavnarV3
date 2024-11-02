@@ -18338,3 +18338,5 @@ $(function () {
 		$(this).text($(this).data('counter-from'));
 	});
 });
+// added js remove below if website stops working
+

@@ -38,29 +38,41 @@
 	border-color: #9fbbff;
 	background-color: #000;
 }
-.card-img-top {
-	width: auto;
-	height: 175px;
-	object-fit: cover; /* This ensures the images maintain their aspect ratio */
+
+/* Additional css I have added in  */
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
 }
 
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Four columns */
-        gap: 20px; /* Adjust the gap between images as needed */
-    }
-    .image-grid img {
-        width: 100%;
-        height: auto;
-    }
-    .image-description {
-        text-align: center;
-        margin-top: 10px;
-    }
-/* Media query for mobile devices */
+.image-grid a {
+	display: block;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+.image-grid a:hover {
+	transform: scale(1.1); /* 10% larger on hover */
+}
+
+.image-grid img {
+	width: 100%;
+	height: auto;
+}
+
+.image-description {
+	text-align: center;
+	margin-top: 10px;
+}
+
 @media (max-width: 768px) {
 	.image-grid {
 		grid-template-columns: 1fr; /* Stacks the images on mobile */
 	}
-}
 
+	.image-grid img {
+		width: 80%; /* Adjust this percentage as needed for smaller images */
+		margin: 0 auto; /* Center the images */
+	}
+}
