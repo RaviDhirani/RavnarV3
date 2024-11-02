@@ -44,12 +44,14 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
+	justify-content: center; /* Centers the grid items */
 }
 
 .image-grid a {
 	display: block;
 	overflow: hidden;
 	transition: transform 0.3s ease;
+	text-align: center; /* Center text within the anchor */
 }
 
 .image-grid a:hover {
@@ -69,10 +71,11 @@
 @media (max-width: 768px) {
 	.image-grid {
 		grid-template-columns: 1fr; /* Stacks the images on mobile */
+		justify-content: center; /* Center the grid items on mobile */
 	}
 
 	.image-grid img {
-		width: 80%; /* Adjust this percentage as needed for smaller images */
+		width: 40%; /* Adjust this percentage as needed for smaller images */
 		margin: 0 auto; /* Center the images */
 	}
 }
