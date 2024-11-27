@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- make sure to add relative path in when you push to remote repo ../ -->
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&amp;display=swap" rel="stylesheet">
+	<link href="../dist/css/yellow-black.css" rel="stylesheet">
+	<link href="../dist/css/preview.css" rel="stylesheet">
+	<title>RavnarLtd | Home</title>
+	<!-- Includ Mermaid lib -->
+	<script type="module"> import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true }); </script> <style> .mermaid { margin: 20px auto; border: 1px solid #ccc; padding: 10px; } </style>
+
+
+
+
+
+</head>
+<body class="with-header position-relative" data-spy="scroll" data-target="#sections-nav" data-offset="80">
+	<header class="header">
+		<div class="container-fluid-limited d-flex align-items-center justify-content-between">
+			<a href="preview.html" class="header-brand">
+				
+				<!-- <img src="assets/img/logo_b.svg" data-light-src="assets/img/logo.svg" data-dark-src="assets/img/RADprofile.jpg" alt="Your logo"> -->
+			</a>
+			<button class="sections-nav-toggler" aria-label="Toggle navigation">
+				<span class="sections-nav-toggler-bar"></span>
+				<span class="sections-nav-toggler-bar"></span>
+				<span class="sections-nav-toggler-bar"></span>
+				<span class="sections-nav-toggler-bar"></span>
+			</button>
+		</div>
+	</header>
+	<nav class="sections-nav-container">
+		<ul id="sections-nav" class="nav sections-nav sections-nav-animated">
+			<li class="sections-nav-item">
+				<a href="../index.html" class="nav-link sections-nav-link goto-section">
+					<span class="sections-nav-counter"></span>
+					Home
+				</a>
+			</li>
+			<li class="sections-nav-item">
+				<a href="../subpages/index.html" class="nav-link sections-nav-link goto-section">
+					<span class="sections-nav-counter"></span>
+					GreenOps
+				</a>
+			</li>
+			<li class="sections-nav-item">
+				<div class="sections-nav-info">
+					<a href="mailto:contact@ravnar.ltd?subject=Initial Enquiry">Book your free consultation today</a><br>
+					<a href="tel:+447739690314">+44 773 9690 314</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<main class="content">
+		<div class="container-fluid-limited">
+			<div class="row">
+				<div class="col col-xl-9">
+					<section id="section-01" class="section section-sub-header animation interaction-in">
+						<div class="section-body">
+							<div class="jumbotron jumbotron-fluid pt-6 pt-lg-8 pb-0 mb-0">
+								<!-- <img src="assets/img/ravnar_logo.png"  alt=""> -->
+								<!-- <img src="assets/img/RADprofile.jpg" class="jumbotron-img animation-translate animation-item-1" alt="Avatar"> -->
+								<h1 class="display-1 display-animated display-animated-in animation-translate animation-item-2">GreenOps</h1>
+								<p class="lead animation-translate animation-item-3">Making the Cloud Sustainable</p>
+								<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>
+								<spline-viewer url="https://prod.spline.design/91u-AheJgKunpUY2/scene.splinecode"></spline-viewer>
+							</div>
+						</div>
+						<div class="section-footer animation-translate animation-item-4">
+							<a class="section-next goto-section" href="#section-02">
+								<span class="section-next-counter">01/01</span>
+								<span class="section-next-label">Next chapter</span>
+								<span class="section-next-icon"></span>
+							</a>
+						</div>
+					</section>
+					<section id="section-02" class="section animation">
+						<div class="section-body">
+							<div class="row">
+								<div class="col col-xl-10">
+									<h2 class="section-title animation-translate-overline animation-item-1">What is GreenOps?</h2>
+									<article class="article animation-translate animation-item-2">
+										<p>
+											GreenOps is about designing, building and improving solutions in the cloud. The main goal is to 
+											define, measure and reduce Carbon emissions, and reduce energy waste. 
+										</p>
+										<p>
+											The main problem statements are: 
+											<br>
+											<br>
+											1) Major Cloud Providers advertise that their data centres are Carbon Neutral - however; is this not an accurate picture.
+											<br>
+											<br>
+											2) Cloud Provider Telemetry is enabling <strong style="color: #ff9d0a;">Greenwashing</strong> - reporting that customers have a "zero" cloud footprint. 
+											<br>
+											<br>
+											3) Cloud Carbon emissions have exceeded the automotive and shipping industry.   
+										</p>
+										<img src="../assets/img/climatiq_report_emissions_data.png" alt="">
+										<p>
+											<h2>Greenops Framework</h2> 
+											<div class="mermaid"> 
+												graph LR 
+												A[Define] 
+												B[Measure]
+												C[Offset]
+												D[Reduce]
+												E[Document and Validate]
+												
+												A --> B --> C --> D --> E 	
+											</div>
+											Contact us directly to find out more!
+										</p>
+									</article>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="section-footer animation-translate animation-item-3">
+							<a class="section-next goto-section" href="#section-03">
+								<span class="section-next-counter">02/10</span>
+								<span class="section-next-label">Next chapter</span>
+								<span class="section-next-icon"></span>
+							</a>
+						</div> -->
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- End of Modals for Experience Section -->
+</body>
+<script src="../dist/js/all.js"></script>
+<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+
+		$('.preview-theme').click(function () {
+			$('link')[1].href = $(this).data('theme');
+			var imgSrcData = $(this).data('theme-bg') === 'light' ? 'dark-src' : 'light-src';
+			$('img[data-' + imgSrcData + ']').each(function () {
+				$(this).attr('src', $(this).data(imgSrcData));
+			});
+
+			return false;
+		});
+	});
+
+	// Bootstrap form validation example
+	(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+			var forms = document.getElementsByClassName('needs-validation');
+			var validation = Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	})();
+</script>
+</html>
